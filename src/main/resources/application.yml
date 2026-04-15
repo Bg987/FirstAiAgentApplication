@@ -1,0 +1,36 @@
+app:
+  cloudinary:
+    url: ${CLOUDINARY_URL}
+  codeword:
+    hash: ${APP_CODEWORD_HASH}
+spring:
+  application:
+    name: FirstAiAgent
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    hikari:
+      connection-test-query: SELECT 1
+      maximum-pool-size: 50
+      minimum-idle: 2
+      validation-timeout: 3000
+      max-lifetime: 60000
+      connection-timeout: 5000
+    url: jdbc:postgresql://aws-1-ap-south-1.pooler.supabase.com:5432/postgres?sslmode=require&prepareThreshold=0
+    username: postgres.pwtktgtawxuctyrampbp
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+telegram:
+  bot:
+    username: ${TELEGRAM_BOT_USERNAME}
+    token: ${TELEGRAM_BOT_TOKEN}
+groq:
+  api:
+    key: ${AI_API}
+instagram:
+  access:
+    token: ${InstagramToken}
+  account:
+    id: ${InstagramId}
