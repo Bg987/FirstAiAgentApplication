@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/masterclass")
-@CrossOrigin(origins = "http://localhost:4200") // Connects to your Angular port
+@CrossOrigin(origins = "https://java-blond-ten.vercel.app") // Connects to your Angular port
 public class MasterclassWebController {
 
     @Autowired
